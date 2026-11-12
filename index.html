@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050914">
+<meta name="description" content="Official personal website of Lewis X.999, Forex trader from Nairobi, Kenya.">
+<title>LEWIS.X.999 | Official Website</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050914;
+  color: #f4f8ff;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+:root {
+  --blue: #00c8ff;
+  --purple: #895cff;
+  --panel: #0c1628;
+  --muted: #aab8ce;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #080f20;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #00c8ff40;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.hero {
+  min-height: 85vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 40%, #063c6240, transparent 60%);
+}
+
+.tag {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 10vw, 85px);
+  margin: 25px 0 10px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 30px #00c8ff70;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero h2 {
+  color: var(--blue);
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  max-width: 550px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(120deg, var(--blue), var(--purple));
+  padding: 13px 25px;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+section {
+  padding: 75px 7%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading h2 {
+  color: var(--blue);
+  font-size: 29px;
+  margin-bottom: 8px;
+}
+
+.heading p {
+  color: var(--muted);
+}
+
+.card {
+  max-width: 850px;
+  margin: auto;
+  background: var(--panel);
+  border: 1px solid #00c8ff35;
+  border-radius: 18px;
+  padding: 30px;
+  color: var(--muted);
+  transition: .3s;
+}
+
+.card:hover, .info:hover {
+  border-color: var(--blue);
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.info {
+  background: var(--panel);
+  border: 1px solid #ffffff15;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: .3s;
+}
+
+.emoji {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.info h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.info p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.quote {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.quote span {
+  color: var(--blue);
+}
+
+.social-grid {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.social {
+  background: var(--panel);
+  border: 1px solid #00c8ff50;
+  border-radius: 15px;
+  padding: 20px 10px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.social:hover {
+  background: #10304b;
+  transform: translateY(-5px);
+}
+
+.social strong {
+  display: block;
+  color: var(--blue);
+  font-size: 17px;
+}
+
+.social small {
+  color: var(--muted);
+}
+
+footer {
+  background: #080f20;
+  text-align: center;
+  padding: 35px 15px;
+  color: var(--muted);
+  border-top: 1px solid #00c8ff35;
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--blue);
+  font-size: 20px;
+}
+
+@media(max-width:600px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 11px;
+    margin: 4px;
+  }
+
+  .hero h2 {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 60px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">LEWIS.X.999</div>
+  <div>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#story">MY STORY</a>
+    <a href="#trading">FOREX</a>
+    <a href="#social">SOCIAL</a>
+  </div>
+</nav>
+
+<!-- HOME -->
+<header class="hero" id="home">
+  <div class="tag">WELCOME TO MY WORLD</div>
+
+  <h1>LEWIS<span>.X.999</span></h1>
+
+  <h2>FOREX TRADER | ONE OF ONE</h2>
+
+  <p>
+    Different mindset. Unique identity.
+    Unlimited potential.
+    Welcome to my journey.
+  </p>
+
+  <a class="btn" href="#about">DISCOVER MY STORY</a>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="heading">
+    <h2>WHO IS LEWIS?</h2>
+    <p>More than a name. A unique identity.</p>
+  </div>
+
+  <div class="card">
+    <h3>Introducing Lewis 👑</h3>
+
+    Lewis is a 19-year-old Forex trader from
+    Nairobi, Kenya 🇰🇪.
+
+    Unique, confident, mysterious and ambitious,
+    Lewis is passionate about technology,
+    creativity, Forex trading and personal growth.
+
+    He believes in building a unique identity,
+    developing his skills and inspiring others.
+
+    Every journey starts somewhere.
+    This is where the story continues.
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="heading">
+    <h2>MY STORY</h2>
+    <p>My roots. My mindset. My ambitions.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="info">
+      <div class="emoji">📍</div>
+      <h3>My Birthplace</h3>
+      <p>Nairobi, Kenya 🇰🇪. This is where my story begins.</p>
+    </div>
+
+    <div class="info">
+      <div class="emoji">💻</div>
+      <h3>Technology</h3>
+      <p>Interested in technology, innovation and creativity.</p>
+    </div>
+
+    <div class="info">
+      <div class="emoji">🔥</div>
+      <h3>Personality</h3>
+      <p>Unique, confident, mysterious and ambitious.</p>
+    </div>
+
+    <div class="info">
+      <div class="emoji">🚀</div>
+      <h3>My Ambition</h3>
+      <p>Building a unique identity and inspiring others.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOREX -->
+<section id="trading">
+  <div class="heading">
+    <h2>THE FOREX JOURNEY 📈</h2>
+    <p>Learning. Discipline. Growth.</p>
+  </div>
+
+  <div class="card">
+    <h3>Forex Trader | Lewis X.999</h3>
+
+    Forex trading is an important part of my journey.
+
+    I am interested in financial markets,
+    currency pairs, technical analysis,
+    market structure and trading psychology.
+
+    My focus is on continuous learning,
+    patience, discipline and improving my skills.
+
+    <br><br>
+
+    <strong style="color:#00c8ff">
+      LEARN THE MARKETS. RESPECT THE RISK.
+    </strong>
+
+    <br><br>
+
+    <a class="btn"
+       href="https://t.me/LewisForexHub"
+       target="_blank"
+       rel="noopener noreferrer">
+       VISIT LEWIS FOREX HUB
+    </a>
+  </div>
+</section>
+
+<!-- MOTTO -->
+<section>
+  <div class="quote">
+    "I WAS NOT BORN TO BE A COPY.
+    <span>I WAS BORN TO BE DIFFERENT.</span>"
+  </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="social">
+  <div class="heading">
+    <h2>CONNECT WITH LEWIS</h2>
+    <p>Follow my journey on social media.</p>
+  </div>
+
+  <div class="social-grid">
+
+    <a class="social"
+       href="https://www.instagram.com/lewis_x_999?mdxt=MXI3czB1bHdlYzhxdQ=="
+       target="_blank" rel="noopener noreferrer">
+      <strong>📸 Instagram</strong>
+      <small>@lewis_x_999</small>
+    </a>
+
+    <a class="social"
+       href="https://www.tiktok.com/@lewis_x_999?_r=1&_t=ZS-9BLPUc6fC2E"
+       target="_blank" rel="noopener noreferrer">
+      <strong>🎵 TikTok</strong>
+      <small>@lewis_x_999</small>
+    </a>
+
+    <a class="social"
+       href="https://www.facebook.com/Lewis.x.999"
+       target="_blank" rel="noopener noreferrer">
+      <strong>👥 Facebook</strong>
+      <small>Lewis.x.999</small>
+    </a>
+
+    <a class="social"
+       href="https://t.me/LewisForexHub"
+       target="_blank" rel="noopener noreferrer">
+      <strong>✈️ Telegram</strong>
+      <small>LewisForexHub</small>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <strong>LEWIS.X.999</strong>
+  <p>Forex Trader | One of One. Never a Copy.</p>
+  <p>Born in Nairobi, Kenya 🇰🇪</p>
+  <p>© 2026 LEWIS.X.999. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
